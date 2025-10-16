@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard Pesca - Tabelle</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Avenir Next World', sans-serif;
+      background-color: #698dd2;
+      color: white;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .container {
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+    }
+    .left-pane {
+      width: 45vw;
+      min-width: 350px;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .map-box {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .right-pane {
+      flex: 1;
+      padding: 24px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+    }
+    .title-box {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 12px;
+      position: sticky;
+      top: 0;
+      background-color: #698dd2;
+      z-index: 10;
+      padding: 12px 0 8px;
+    }
+    .title-box img {
+      width: 64px;
+      height: auto;
+    }
+    h1 {
+      font-size: 22px;
+      margin: 0;
+      white-space: nowrap;
+    }
+    .table-box {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+    .description {
+      margin-top: 6px;
+      font-size: 13px;
+      color: #ffffffcc;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+    th, td {
+      border: 1px solid #ffffff55;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #ffffff33;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="left-pane">
+    <iframe class="map-box" src="https://iuav-labgis.maps.arcgis.com/apps/instant/basic/index.html?appid=8d86f061528641c196175b7b05b10d06"></iframe>
+  </div>
+
+  <div class="right-pane">
+    <div class="title-box">
+      <img src="https://i.imgur.com/TRvhfgG.png" alt="Icona Pesca Ricamata" />
+      <h1>Pesca: Dati Spaziali e Socio-Economici</h1>
+    </div>
+
+    <div class="table-box">
+      <div class="description">Turnover del settore (milioni di euro). Tabella dei dati annuali dal 2013 al 2022.</div>
+      <table>
+        <tr><th>Anno</th><th>Turnover (mln €)</th></tr>
+        <tr><td>2013</td><td>732.96</td></tr>
+        <tr><td>2014</td><td>701.97</td></tr>
+        <tr><td>2015</td><td>775.53</td></tr>
+        <tr><td>2016</td><td>794.85</td></tr>
+        <tr><td>2017</td><td>831.99</td></tr>
+        <tr><td>2018</td><td>871.80</td></tr>
+        <tr><td>2019</td><td>823.21</td></tr>
+        <tr><td>2020</td><td>557.72</td></tr>
+        <tr><td>2021</td><td>621.70</td></tr>
+        <tr><td>2022</td><td>577.61</td></tr>
+      </table>
+    </div>
+
+    <div class="table-box">
+      <div class="description">Valore Aggiunto Lordo (GVA) del settore pesca, in milioni di euro.</div>
+      <table>
+        <tr><th>Anno</th><th>GVA (mln €)</th></tr>
+        <tr><td>2013</td><td>381.95</td></tr>
+        <tr><td>2014</td><td>357.25</td></tr>
+        <tr><td>2015</td><td>448.20</td></tr>
+        <tr><td>2016</td><td>472.44</td></tr>
+        <tr><td>2017</td><td>503.68</td></tr>
+        <tr><td>2018</td><td>492.37</td></tr>
+        <tr><td>2019</td><td>490.28</td></tr>
+        <tr><td>2020</td><td>335.18</td></tr>
+        <tr><td>2021</td><td>365.09</td></tr>
+        <tr><td>2022</td><td>314.01</td></tr>
+      </table>
+    </div>
+
+    <div class="table-box">
+      <div class="description">Occupazione (FTE): unità di lavoro a tempo pieno stimate nel periodo 2013–2022.</div>
+      <table>
+        <tr><th>Anno</th><th>Occupazione (FTE)</th></tr>
+        <tr><td>2013</td><td>10.04</td></tr>
+        <tr><td>2014</td><td>11.32</td></tr>
+        <tr><td>2015</td><td>11.58</td></tr>
+        <tr><td>2016</td><td>11.75</td></tr>
+        <tr><td>2017</td><td>11.59</td></tr>
+        <tr><td>2018</td><td>11.15</td></tr>
+        <tr><td>2019</td><td>10.92</td></tr>
+        <tr><td>2020</td><td>8.47</td></tr>
+        <tr><td>2021</td><td>8.56</td></tr>
+        <tr><td>2022</td><td>7.90</td></tr>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
